@@ -8,6 +8,7 @@ class AdoptionProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Test to ensure Spring Boot context loads successfully
 	}
 
 }
