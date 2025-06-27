@@ -2,6 +2,7 @@ package com.example.adoptionproject.entities;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class Adoption {
 
     @ManyToOne
     @JoinColumn(name = "adoptant_id")
+    @JsonBackReference
     private Adoptant adoptant;
 
     @OneToOne
