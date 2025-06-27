@@ -3,6 +3,7 @@ package com.example.adoptionproject.entities;
 import javax.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class Adoptant {
     private int telephone;
 
     @OneToMany(mappedBy = "adoptant", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Adoption> adoptions;
 
 }
